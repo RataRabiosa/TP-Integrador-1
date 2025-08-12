@@ -6,9 +6,23 @@
   color: #14213d;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 header {
   border: 1px solid #e5e5e5;
   padding: 1.2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 .menu {
@@ -619,6 +633,11 @@ header {
 .producto__carrito__foot {
   text-align: center;
   font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  background-color: #e5e5e5;
 }
 
 /*# sourceMappingURL=main.css.map */
