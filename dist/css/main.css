@@ -53,17 +53,17 @@ main {
   width: 20px;
 }
 
-.rootPage {
+.duffman {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
+  border: 1px solid black;
 }
 
 .duffMan__imagen {
-  margin-top: 2.5rem;
-  margin-left: 2rem;
-  position: sticky;
-  top: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 300px;
+  margin-top: 3rem;
 }
 
 .producto {
@@ -638,6 +638,21 @@ main {
 .footer {
   text-align: center;
   background-color: #e5e5e5;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__titulo {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .menu__inicio, .menu__ofertas, .menu__masVendidos,
+  .menu__preguntasFrecuentes, .menu__carrito {
+    margin: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
