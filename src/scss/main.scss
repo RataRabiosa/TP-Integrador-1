@@ -1,0 +1,136 @@
+@use "variables" as *;
+@use "buttons" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $rootFont;
+    color: $fontColor;
+}
+
+header {
+    border: 1px solid $headerBorderColor;
+    padding: 1.2rem;
+}
+
+.menu {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.menu__titulo {
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.menu__inicio, .menu__ofertas, .menu__masVendidos {
+    margin-right: 2rem;
+    text-decoration: none;
+}
+
+.menu__preguntasFrecuentes {
+    text-decoration: none;
+}
+
+.menu__carrito {
+    margin-left: auto;
+    text-decoration: none;
+    & img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.rootPage {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+}
+
+.duffMan__imagen {
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+    position:sticky;
+    top: 0;
+}
+
+.producto {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px 10px 0px 0px;
+    padding: 1.2rem;
+    gap: 25px;
+    
+}
+
+@for $i from 1 through 13 {
+    .producto__item#{$i} {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        border: 1px solid #e5e5e5;
+        border-radius: 20px;
+        height: 400px;
+        width: 400px;
+        padding: 1rem;
+    
+        & .producto__item#{$i}__imagen {
+            height: 70%;
+            width: 70%;
+        }
+    
+        & .producto__item#{$i}__titulo {
+            margin-top: 0.3rem;
+        }
+    
+        & .producto__item#{$i}__precio {
+            margin-top: 0.3rem;
+            font-weight: bold;
+        }
+    
+        & .producto__item#{$i}__boton {
+            @include createBtn($btnBgColor, $btnFontColor);
+        }
+    }
+}
+
+@for $i from 1 through 13 {
+    .producto__item#{$i}__precio--oferta {
+        color: $fontStrikeColor;
+        font-weight: 1;
+    }
+}
+
+@for $i from 1 through 4 {
+    .producto__faq__contenido#{$i} {
+        text-align: justify;
+    }
+}
+
+.producto__carrito {
+    border-collapse: collapse;
+    flex-grow: 1;
+    border-radius: 20px;
+}
+.producto__carrito__body {
+    text-align: center;
+}
+@for $i from 1 through 3 {
+    .producto__carrito__row#{$i} {
+        td {
+            padding: 0.5rem;
+        }
+        &:hover {
+            background-color: $tableHoverColor;
+        }
+    }
+}
+
+.producto__carrito__foot {
+    text-align: center;
+    font-weight: bold;
+}

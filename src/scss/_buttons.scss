@@ -1,0 +1,13 @@
+@mixin createBtn($btnBgColor, $btnFontColor, $btnPadding: 0.5rem, $btnMarginTop: 0.5rem, $btnBorderRadius: 9px) {
+    background-color: $btnBgColor;
+    color: $btnFontColor;
+    padding: $btnPadding;
+    margin-top: $btnMarginTop;
+    border-radius: $btnBorderRadius;
+    border: none;
+
+    &:hover {
+        font-size: 15px;
+        transition: 0.3s;
+    }
+}
