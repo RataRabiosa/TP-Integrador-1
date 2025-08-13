@@ -7,7 +7,7 @@ El trabajo trata de una tienda de bebidas con tematica del personaje "Duffman" d
 <img src="https://github.com/RataRabiosa/TP-Integrador-1/blob/main/dist/img/paleta.png?raw=true">
 
 ## Caracteristicas
-La web consta de 5 paginas:
+La sitio consta de 5 paginas:
 1. Seccion Index
 2. Seccion "Ofertas"
 3. Seccion "Mas vendidos"
